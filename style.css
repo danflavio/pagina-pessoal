@@ -80,3 +80,26 @@ section {
   width: 3px; /* Largura da linha esquerda */
   background-color: #007bff; /* Cor da linha esquerda */
 }
+
+.linkedin-btn {
+  background-color: #0077b5;
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+.linkedin-btn:hover {
+  background-color: #005983;
+  color: white;
+  text-decoration: none;
+}
+.whatsapp-btn {
+  background-color: #25D366;
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+.whatsapp-btn:hover {
+  background-color: #1ebe57;
+  color: white;
+  text-decoration: none;
+}
