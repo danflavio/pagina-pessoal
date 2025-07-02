@@ -44,3 +44,14 @@ section {
   font-size: 0.95rem;
   padding: 0.6em 0.9em;
 }
+
+.btn-linkedin {
+  background-color: #0077B5;
+  color: #fff;
+  border: none;
+}
+
+.btn-linkedin:hover {
+  background-color: #005f91;
+  color: #fff;
+}
