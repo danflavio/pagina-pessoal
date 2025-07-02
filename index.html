@@ -8,6 +8,55 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="icon" href="favicon.png" type="image/png" />
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .profile-img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #007bff;
+    }
+
+    .btn-linkedin {
+      color: #0a66c2;
+      border-color: #0a66c2;
+    }
+    .btn-linkedin:hover {
+      background-color: #0a66c2;
+      color: white;
+    }
+
+    /* Linha vertical esquerda nos cards */
+    .card-with-line {
+      position: relative;
+      padding-left: 20px; /* espaço para a linha */
+    }
+    .card-with-line::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 4px;
+      background-color: #0a66c2; /* cor azul LinkedIn para destaque */
+      border-radius: 2px;
+    }
+
+    /* Link da empresa azul escuro */
+    .empresa-link {
+      color: #0a66c2;
+      text-decoration: none;
+    }
+    .empresa-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -20,13 +69,13 @@
       <a class="btn btn-outline-primary" href="mailto:danflavio@gmail.com">
         <i class="bi bi-envelope-fill"></i> Email
       </a>
-        <a class="btn btn-linkedin" href="https://www.linkedin.com/in/danflavio" target="_blank">
+      <a class="btn btn-linkedin" href="https://www.linkedin.com/in/danflavio" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-linkedin"></i> LinkedIn
-        </a>
-        <a class="btn btn-outline-dark" href="curriculo-daniel.pdf" target="_blank">
+      </a>
+      <a class="btn btn-outline-dark" href="curriculo-daniel.pdf" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-download"></i> Currículo
-        </a>      
-      <a class="btn btn-success" href="https://wa.me/5562992352578" target="_blank">
+      </a>      
+      <a class="btn btn-success" href="https://wa.me/5562992352578" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-whatsapp"></i> WhatsApp
       </a>
     </div>
@@ -34,7 +83,7 @@
 
   <main class="container">
     <section>
-      <h2>Resumo Profissional</h2>
+      <h2>Resumo</h2>
       <p>
         Analista de Sistemas com sólida experiência no ERP Totvs Protheus. Atuação nos módulos de Compras, Financeiro, Contabilidade,
         Faturamento e Estoque. Experiência em migração de versões e integrações com outros sistemas usando REST/XML.
@@ -44,41 +93,85 @@
 
     <section>
       <h2>Experiência Profissional</h2>
-      <div class="card mb-3">
+
+      <div class="card mb-3 card-with-line">
         <div class="card-body">
-          <h5>Sesi Goiás <small class="text-muted">(11/2018 – Presente)</small></h5>
-          <p>Sustentação e melhorias no ERP Totvs Protheus. Integrações com sistemas legados via REST/XML. Criação de jobs, automações e participação em migrações. Interface com áreas de negócio.</p>
+          <h5>
+            <a href="https://www.fieg.com.br" target="_blank" rel="noopener noreferrer" class="empresa-link">
+              FIEG - Federação das Indústrias do Estado de Goiás
+            </a>
+            <small class="text-muted">(11/2018 – Presente)</small>
+          </h5>
+          <ul>
+            <li>Desenvolvimento, sustentação e melhoria de rotinas no ERP Totvs Protheus</li>
+            <li>Customizações nos módulos de Compras, Financeiro, Contabilidade, Faturamento e Estoque</li>
+            <li>Participação em projetos de migração de versão do Protheus, assegurando aderência e estabilidade do sistema</li>
+            <li>Implementação de integrações entre sistemas legados e o Protheus, utilizando APIs REST/XML</li>
+          </ul>
         </div>
       </div>
 
-      <div class="card mb-3">
+      <div class="card mb-3 card-with-line">
         <div class="card-body">
-          <h5>CDA – Companhia de Distribuição Araguaia <small class="text-muted">(2010 – 2018)</small></h5>
-          <p>Atuação em múltiplos módulos do Protheus. Desenvolvimento de soluções para pesagem de cereais. Suporte ao RH e área comercial. Ajustes em relatórios e configurações no sistema Senior.</p>
+          <h5>
+            <a href="https://www.cdaalimentos.com.br" target="_blank" rel="noopener noreferrer" class="empresa-link">
+              CDA – Companhia de Distribuição Araguaia
+            </a>
+            <small class="text-muted">(2010 – 2018)</small>
+          </h5>
+          <ul>
+            <li>Atuação com ERP Totvs Protheus em ambiente Linux</li>
+            <li>Suporte e desenvolvimento em diversos módulos: Faturamento, Estoque, Custo Médio, Financeiro, Livros Fiscais e SPED</li>
+            <li>Manutenção de rotinas integradas à pesagem de cereais</li>
+            <li>Otimização de fluxos de pedidos e notas fiscais no setor comercial</li>
+            <li>Suporte ao RH com sistema Senior</li>
+          </ul>
         </div>
       </div>
 
-      <div class="card mb-3">
+      <div class="card mb-3 card-with-line">
         <div class="card-body">
-          <h5>Autoeste Automóveis <small class="text-muted">(2009 – 2010)</small></h5>
-          <p>Administração de redes e sistemas FIAT. Apoio à infraestrutura de TI e relatórios gerenciais.</p>
+          <h5>
+            <a href="https://www.autoestefiat.com.br" target="_blank" rel="noopener noreferrer" class="empresa-link">
+              Autoeste Automóveis
+            </a>
+            <small class="text-muted">(2009 – 2010)</small>
+          </h5>
+          <ul>
+            <li>Administração de redes, suporte tecnológico e gestão de telefonia e impressoras</li>
+            <li>Manutenção de sistemas FIAT e suporte ao DealerNET nas operações da oficina e pós-venda</li>
+            <li>Geração de relatórios e indicadores de custos com TI e telefonia</li>
+            <li>Cotação e aquisição de equipamentos e insumos de informática</li>
+          </ul>
         </div>
       </div>
 
-      <div class="card mb-3">
+      <div class="card mb-3 card-with-line">
         <div class="card-body">
           <h5>Salinas Automóveis <small class="text-muted">(2007 – 2009)</small></h5>
-          <p>Contas a receber, controle de pagamentos, validação de propostas comerciais e liberação de veículos.</p>
+          <ul>
+            <li>Atuação no setor financeiro com foco em contas a receber e apoio à liberação de vendas de veículos</li>
+            <li>Gestão e controle da carteira de recebíveis (cartões e transferências)</li>
+            <li>Conferência de pagamentos para liberação de veículos à equipe comercial</li>
+            <li>Validação de propostas de vendas e condições de pagamento</li>
+          </ul>
         </div>
       </div>
     </section>
 
     <section>
       <h2>Formação Acadêmica</h2>
-      <ul>
-        <li>Pós-graduação em Gestão de Projetos – Descomplica (2023–2025)</li>
-        <li>Bacharelado em Ciência da Computação – Faculdade Anhanguera (2009–2012)</li>
-      </ul>
+        <div class="card mb-3 card-with-line">
+        <div class="card-body">
+        <p>Pós-graduação em Gestão de Projetos – Descomplica (2023–2025)</p>
+        </div>
+      </div>        
+        <div class="card mb-3 card-with-line">
+        <div class="card-body">
+        <p>Bacharelado em Ciência da Computação – Faculdade Anhanguera (2009–2012)</p>
+        </div>        
+        </div>      
+        
     </section>
 
     <section>

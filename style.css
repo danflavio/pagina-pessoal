@@ -55,3 +55,28 @@ section {
   background-color: #005f91;
   color: #fff;
 }
+
+.empresa-link {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease; /* transição suave de 0.3 segundos */
+}
+
+.empresa-link:hover {
+  color: #0077cc; /* cor nova ao passar o mouse (exemplo azul) */
+}
+
+.card-with-line {
+  position: relative;
+  padding-left: 20px; /* Ajuste o padding conforme necessário para a posição da linha */
+}
+
+.card-with-line::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 3px; /* Largura da linha esquerda */
+  background-color: #007bff; /* Cor da linha esquerda */
+}
