@@ -34,6 +34,13 @@ header {
   border-radius: 0.75rem;
   background-color: #ffffff;
   box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  cursor: pointer; /* Altera o cursor para indicar que é clicável */
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Efeito de escala no hover */
+    background-color: #e6f0ff; 
 }
 
 section {
@@ -87,19 +94,35 @@ section {
   border: none;
   transition: background-color 0.3s ease;
 }
+
 .linkedin-btn:hover {
   background-color: #005983;
   color: white;
   text-decoration: none;
 }
+
 .whatsapp-btn {
   background-color: #25D366;
   color: white;
   border: none;
   transition: background-color 0.3s ease;
 }
+
 .whatsapp-btn:hover {
   background-color: #1ebe57;
   color: white;
+  text-decoration: none;
+}
+
+.btn-cv {
+  background-color: #ffe5b4; /* laranja pastel claro */
+  color: #7a3e00; /* marrom suave para contraste */
+  border: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-cv:hover {
+  background-color: #ffd49a; /* laranja pastel um pouco mais forte */
+  color: #5a2d00; /* tom um pouco mais escuro no hover */
   text-decoration: none;
 }
