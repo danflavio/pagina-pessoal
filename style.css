@@ -126,3 +126,11 @@ section {
   color: #5a2d00; /* tom um pouco mais escuro no hover */
   text-decoration: none;
 }
+
+p, ul {
+  text-align: justify;
+}
+
+  ul li {
+  text-align: justify;
+}
