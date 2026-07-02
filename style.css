@@ -171,35 +171,32 @@ a {
   gap: 0.75rem;
 }
 
-.btn-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1px solid var(--border-color);
-  background: var(--bg-card);
-  color: var(--text-primary);
-  display: flex;
+.btn-topbar-cv {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 0.5rem 1.15rem;
+  border-radius: var(--radius-pill);
+  background-color: var(--primary);
+  color: #ffffff !important;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  font-size: 1.1rem;
-  cursor: pointer;
+  gap: 0.4rem;
+  box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.3);
   transition: var(--transition);
+  white-space: nowrap;
 }
 
-.btn-icon:hover {
-  background: var(--bg-card-hover);
-  border-color: var(--border-hover);
-  transform: scale(1.05);
+.btn-topbar-cv:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px 0 rgba(37, 99, 235, 0.45);
 }
 
-/* Floating Theme Toggle in Top Right Corner */
-.theme-toggle-fixed {
-  position: fixed;
-  top: 1.15rem;
-  right: 1.5rem;
-  z-index: 99999;
-  width: 46px;
-  height: 46px;
+/* Theme Toggle Button in Topbar */
+.theme-toggle-btn {
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   background: var(--bg-card);
   border: 1px solid var(--border-color);
@@ -207,27 +204,33 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   cursor: pointer;
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-sm);
   transition: var(--transition);
+  flex-shrink: 0;
 }
 
-.theme-toggle-fixed:hover {
-  transform: scale(1.15) rotate(15deg);
+.theme-toggle-btn:hover {
+  transform: scale(1.1) rotate(15deg);
   background: var(--primary);
   color: #ffffff;
   border-color: var(--primary);
-  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.35);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
 }
 
 @media (max-width: 768px) {
-  .theme-toggle-fixed {
-    top: 0.85rem;
-    right: 1rem;
-    width: 40px;
-    height: 40px;
-    font-size: 1.1rem;
+  .topbar-actions {
+    gap: 0.5rem;
+  }
+  .btn-topbar-cv {
+    padding: 0.45rem 0.85rem;
+    font-size: 0.8rem;
+  }
+  .theme-toggle-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 1.05rem;
   }
 }
 
