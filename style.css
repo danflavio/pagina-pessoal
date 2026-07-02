@@ -95,7 +95,6 @@ p {
   color: var(--text-secondary);
   font-size: 1.05rem;
   line-height: 1.7;
-  text-align: justify;
 }
 
 a {
@@ -367,6 +366,12 @@ a {
   max-width: 750px;
   margin-bottom: 2.5rem;
   line-height: 1.6;
+  text-align: justify;
+  text-justify: inter-word;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  word-spacing: -0.01em;
 }
 
 .hero-actions {
@@ -440,6 +445,12 @@ a {
   font-weight: 400;
   line-height: 1.8;
   margin-bottom: 2rem;
+  text-align: justify;
+  text-justify: inter-word;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  word-spacing: -0.01em;
 }
 
 .about-text:last-child {
@@ -520,6 +531,12 @@ a {
   font-size: 1.05rem;
   color: var(--text-secondary);
   line-height: 1.7;
+  text-align: justify;
+  text-justify: inter-word;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  word-spacing: -0.01em;
 }
 
 /* ===== 10. Digital Lab Grid (Projetos Extras) ===== */
@@ -787,5 +804,13 @@ footer a:hover {
     padding: 0.95rem 1.5rem;
     font-size: 1rem;
     justify-content: center;
+  }
+
+  p,
+  .about-text,
+  .career-desc,
+  .hero-subtitle {
+    text-align: left !important;
+    hyphens: none;
   }
 }
