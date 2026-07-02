@@ -206,12 +206,18 @@ header .lead {
   border: 1px solid transparent;
   transition: var(--transition);
   cursor: pointer;
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }
 
 .list-item:hover {
   border-color: var(--primary);
   background-color: var(--bg-card);
   box-shadow: var(--shadow-sm);
+  transform: translateX(4px);
+  text-decoration: none;
+  color: inherit;
 }
 
 .list-item h5 {
