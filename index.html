@@ -384,14 +384,22 @@
 
       revealElements.forEach(el => revealOnScroll.observe(el));
 
-      // 2. Theme Toggle (Light / Dark Mode)
+      // 2. Theme Toggle (Light / Dark Mode) with localStorage persistence
       const toggleBtn = document.getElementById("theme-toggle");
       const htmlEl = document.documentElement;
+
+      // Restore saved theme preference
+      const savedTheme = localStorage.getItem("theme") || "light";
+      htmlEl.setAttribute("data-theme", savedTheme);
+      toggleBtn.innerHTML = savedTheme === "light"
+        ? '<i class="bi bi-moon-stars-fill"></i>'
+        : '<i class="bi bi-sun-fill"></i>';
       
       toggleBtn.addEventListener("click", () => {
         const currentTheme = htmlEl.getAttribute("data-theme") || "light";
         const newTheme = currentTheme === "light" ? "dark" : "light";
         htmlEl.setAttribute("data-theme", newTheme);
+        localStorage.setItem("theme", newTheme);
         toggleBtn.innerHTML = newTheme === "light" 
           ? '<i class="bi bi-moon-stars-fill"></i>' 
           : '<i class="bi bi-sun-fill"></i>';
